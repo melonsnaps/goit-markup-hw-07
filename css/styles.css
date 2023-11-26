@@ -24,6 +24,7 @@ li {
     display: flex;
     justify-content: center;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .container {
@@ -129,6 +130,13 @@ nav .link {
     top: 20px;
 }
 
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* END OF HEADER */
 
 .section {
@@ -143,7 +151,6 @@ nav .link {
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
-    width: 1440рх;
 }
 
 .main-section h1 {
@@ -466,6 +473,8 @@ button:focus {
 .customer-icon {
     border: 1px solid #8e8f99;
     padding: 16px 32px;
+    flex-basis: calc(100% / 2 - 30px);
+    text-align: center;
 }
 
 .customer-icon svg {
@@ -633,10 +642,34 @@ footer .logo {
     .container {
         width: 768px;
     }
+
+    .about-item,
+    .team-item {
+        flex-basis: calc(100% / 2 - 30px);
+    }
+
+    .customer-icon {
+        flex-basis: calc(100% / 3 - 30px);
+    }
+        
+    .footer {
+        text-align: center;
+    }
+       
 }
 
 @media (min-width: 1200px) {
     .container {
         width: 1200px;
     }
+
+    .about-item,
+    .team-item {
+        flex-basis: calc(100% / 4 - 30px);
+    }
+
+    .customer-icon {
+        flex-basis: calc(100% / 6 - 30px);
+    }
+
 }
